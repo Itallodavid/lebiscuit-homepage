@@ -6,6 +6,44 @@
     })
 })();
 
+(()=>{
+    Vue.component('card-dica', {
+        name: 'card-dica',
+        props: ['dica'],
+        template: `<div
+        aria-hidden="false"
+        role="group"
+        aria-roledescription="slide"
+        aria-label="9 of 12"
+        class="lebiscuit-le-component-0-x-slide lebiscuit-le-component-0-x-slide--firstVisible lebiscuit-le-component-0-x-slide--visible flex relative"
+        data-index="9"
+        style="width: 5%;"
+      >
+        <div class="lebiscuit-le-component-0-x-slideChildrenContainer flex justify-center items-center w-100">
+          <div class="lebiscuit-le-component-0-x-blog-carousel__item dib">
+            <div data-id="7434" class="lebiscuit-le-component-0-x-blog-card lebiscuit-le-component-0-x-blog-card--carousel h-100 br3-l flex flex-row-reverse flex-column-l mb4 mb0-l">
+              <a href="#" class="w-100-l flex flex-column justify-center pr4">
+                <img
+                  :alt="dica.titulo"
+                  class="lebiscuit-le-component-0-x-blog-card__image vtex-render-runtime-8-x-lazyload ls-is-cached lazyloaded"
+                  :data-src="dica.imagem"
+                  loading="lazy"
+                  :src="dica.imagem"
+                />
+              </a>
+              <div class="pa1 w-100-l">
+                <p class="lebiscuit-le-component-0-x-blog-card__title pt1 c-on-base f6 f4-l b mt0">{{dica.titulo}}</p>
+                <span class="f7 pb3 db lb-c-neutral-grey">{{dica.data}}</span>
+                <p class="lebiscuit-le-component-0-x-blog-card__description mt2 mb0 lb-c-neutral-grey lb-break-spaces">{{dica.conteudo}}</p>
+                <a href="#" class="f6 db no-underline br3 tc ph4 mt4 w4 pv3 white lb-bg-neutral">Conferir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `
+    })
+})();
 
 (()=>{
     Vue.component('carrossel-produtos', {

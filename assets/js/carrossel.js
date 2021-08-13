@@ -327,3 +327,76 @@ const mockDeProdutos = () => {
         },
     });
 })();
+
+// CARROSSEL DICAS
+(()=>{
+    const DIR_PADRAO = './assets/images/dicas-le';
+
+    new Vue({
+        el: '#carrossel-dicas',
+        data(){
+            return {
+                dicas: [
+                    {
+                        data: '03 de agosto de 2021 | Blog da le',
+                        titulo: 'Saiba tudo para montar seu cantinho gamer',
+                        conteudo: 'Precisa de um lugar para jogar videogame? Seja no modo multiplayer ou online, com nosso tutorial você terá sua própria estação para viver divertidos momentos! Jogos eletrônicos estão cada vez mais em alta. Inúmeras empresas crescem e investem nesse tipo de entretenimento. Inicialmente, o que era coisa de gente nerd, tornou-se um grande mercado, com',
+                        imagem: `${DIR_PADRAO}/cantinho-gamer.png`
+                    },
+                    {
+                        data: '02 de Agosto 2021 | Blog da Le',
+                        titulo: 'Como levar as Olimpíadas para dentro de casa',
+                        conteudo: 'Com a chegada dos Jogos Olímpicos, muitas crianças podem se inspirar e se transformar em futuros atletas. É hora de aproveitar o momento e trazer o esporte para mais perto de todos! Há tantos aspectos incríveis das Olimpíadas para compartilhar com nossos filhos, desde a história por trás dos jogos até assistir aos dias de ',
+                        imagem: `${DIR_PADRAO}/olimpiadas.png`
+                    },
+                    {
+                        data: '30 de Julho 2021 | Blog da Le',
+                        titulo: 'Clube Minha Le, seu melhor programa de vantagens',
+                        conteudo: 'Se você gosta de ofertas exclusivas, preços especiais e um monte de vantagens, conheça e faça parte do nosso Clube! É difícil a gente encontrar quem não gosta de benefícios, né? Precinhos especiais, ofertas em primeira mão',
+                        imagem: `${DIR_PADRAO}/lebiscuit.png`
+                    },
+                    {
+                        data: '26 de Julho 2021 | Blog da Le',
+                        titulo: 'Escolha o presente ideal para seu tipo de pai',
+                        conteudo: 'Ninguém conhece seu pai melhor do que você. Então, qual é o tipo dele? Você sabe do que ele precisa? O que você pensou em comprar? Agora, no Blog da Le! Como andam os sentimentos nesta perspectiva de uma comemoração do Dia dos Pais diferente este ano? Felizmente as coisas estão voltando ao normal, mas',
+                        imagem: `${DIR_PADRAO}/pais.png`
+                    },
+                    {
+                        data: '13 de Agosto 2021 | Blog da Le',
+                        titulo: 'Marca Le: potes de vidro ideais para armazenar',
+                        conteudo: 'Além de selar o sabor, potes para alimentos mantêm as coisas organizadas e fáceis de encontrar, para que você possa se concentrar apenas em cozinhar. Um dos produtos que mais vendem aqui na Le biscuit são os potes de vidro. Práticos, seguros e estilosos, eles fazem sucesso em todas as cozinhas. Se você ainda está ',
+                        imagem: `${DIR_PADRAO}/potes.png`
+                    },
+                    {
+                        data: '12 de Agosto 2021 | Blog da Le',
+                        titulo: 'Marca Le: otimize e decore com prateleiras',
+                        conteudo: 'Elas são itens curingas e indispensáveis em qualquer cômodo, para colocar o que quiser! Não importa o tamanho da sua casa, você sempre descobrirá que precisa organizar algum espaço de vez em quando. O ideal, claro, é fazer isso sem comprometer a aparência. Sabe uma ótima solução? Investir em prateleiras! Elas tratam do problema de ',
+                        imagem: `${DIR_PADRAO}/prateleira.png`
+                    },
+                    {
+                        data: '11 de Agosto 2021 | Blog da Le',
+                        titulo: 'Marca Le: como curtir o melhor da cama elástica',
+                        conteudo: 'Ela é uma excelente adição ao quintal de todos os pais. Além de uma grande fonte de diversão e exercício, todas crianças amam pular! Pular na cama elástica é algo que as pessoas amam há gerações. Aquela sensação de pura alegria quando você pula, sem preocupações',
+                        imagem: `${DIR_PADRAO}/cama-elastica.png`
+                    }
+                ]
+            }
+        },
+        mounted() {
+            new Splide(this.$el.querySelector('.splide'), {
+                type: "loop",
+                perPage: 4,
+                perMove: 4,
+                pagination: false,
+                classes: {
+                    arrows: "splide__arrows",
+                    arrow: "splide__arrow",
+                    prev: "splide__arrow--prev",
+                    next: "splide__arrow--next",
+                },
+            }).mount();
+
+            // $(this.$el.querySelector('.splide__pagination')).addClass('slick-dots');
+        },
+    })
+})()
